@@ -2,7 +2,7 @@
 Pipe = Object:extend()
 
 function Pipe:new(X, Y, W, G)
-    self.X = X + W
+    self.X = X
     self.Y = Y
     self.W = W
     self.gap = G
@@ -13,8 +13,8 @@ function Pipe:update(dt)
     self.X = self.X - 120*dt
     
     -- when pipe move out of window delete the first pipe in listOfPipes, then add a new pipe
-    if self.X + self.W < 0 then
-        table.insert(listOfPipes, Pipe(pipeX, love.math.random(0, H - gap), pipeW, gap))
+    if self.X < -pipeDist then
+        table.insert(listOfPipes, Pipe(W, love.math.random(0, H - gap), pipeW, gap))
         table.remove(listOfPipes, 1)
     end
 end
