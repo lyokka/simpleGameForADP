@@ -9,4 +9,4 @@ This simulation is a simplified version of autonomous driving task.
 sample result
 
 
-[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/8INAAB1bjEE)
+[![Watch the video](Screenshot from 2017-12-02 23-47-04.png)](https://youtu.be/8INAAB1bjEE)
