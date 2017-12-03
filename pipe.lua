@@ -10,11 +10,11 @@ end
 
 function Pipe:update(dt)
     -- pipe moving speed
-    self.X = self.X - 120*dt
+    self.X = self.X - 250*dt
     
     -- when pipe move out of window delete the first pipe in listOfPipes, then add a new pipe
     if self.X < -pipeDist then
-        table.insert(listOfPipes, Pipe(W, love.math.random(0, H - gap), pipeW, gap))
+        table.insert(listOfPipes, Pipe(listOfPipes[3].X+2*pipeDist, love.math.random(0, H - gap), pipeW, gap))
         table.remove(listOfPipes, 1)
     end
 end
